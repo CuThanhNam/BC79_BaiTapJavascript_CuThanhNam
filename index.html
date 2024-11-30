@@ -4,8 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <body>
+    <div class="content" style="width: 70%; margin: 0 auto;">
+      <div class="form-group">
+        <h4 style="font-size: 20px;">Bài 1: Tính tiền lương nhân viên và viết chương trình tính tiền lương nhân viên. Lương 1 ngày: 100.000</h4>
+        <div class="form-group">
+          <p> Lương 1 ngày</p>
+          <input id="luong1Ngay" class="form-control w-25">
+        </div>
+        <br>
+        <div class="form-group">
+          <p> Số ngày làm</p>
+          <input id="soNgaylam" class="form-control w-25">
+        </div>
+        <br>
+        <button onclick="tinhTongLuong()" id="btnTinhTien" class="btn btn-success">Tính Tiền</button>
+        <div class="mt-2 alert alert-success w-25">
+          Kết quả : <span id="tongLuong"></span>
+        </div>
+      </div>
+      <hr>
+      <div class="form-group">
+        <h4 style="font-size: 20px;">Bài 2: Tính giá trị trung bình và viết chương trình nhập vào 5 số thực. Tính giá trị trung bình của 5 số này và xuất ra màn hình</h4>
+        <div class="form-group">
+          <p> Số thức 1</p>
+          <input id="soThuc1" class="form-control w-25">
+        </div>
+        <div class="form-group">
+          <p> Số thức 2</p>
+          <input id="soThuc2" class="form-control w-25">
+        </div>
+        <div class="form-group">
+          <p> Số thức 3</p>
+          <input id="soThuc3" class="form-control w-25">
+        </div>
+        <div class="form-group">
+          <p> Số thức 4</p>
+          <input id="soThuc4" class="form-control w-25">
+        </div>
+        <div class="form-group">
+          <p> Số thức 5</p>
+          <input id="soThuc5" class="form-control w-25">
+        </div>
+        <br>
+      <button onclick="giaTriTrungBinh()" id="btntinhGiaTriTrungBinh" class="btn btn-success">Tính trung bình</button>
+        <div class="mt-2 alert alert-success w-25">
+          Kết quả : <span id="giatriTB"></span>
+        </div>
+      </div>
+      <hr>
+      <div class="form-group">
+        <h4 style="font-size: 20px;">Bài 3: Quy đổi tiền và giá USD hiện nay đang là 23.500 VND. Viết chương trình quy đổi từ USD sang VND. Tính và xuất ra số tiền sau quy đổi VND.</h4>
+        <div class="form-group">
+          <p>Quy đổi tiền VND</p>
+          <input id="tienUSD" class="form-control w-25">
+        </div>
+        <br>
+        <button onclick="quyDoiTien()" id="btnquyDoiTien" class="btn btn-success">Quy đổi tiền</button>
+        <div class="mt-2 alert alert-success w-25">
+          Kết quả : <span id="quyDoiVND"></span>
+        </div>
+      </div>
+      <hr>
+      <div class="form-group">
+        <h4 style="font-size: 20px;">Bài 4: Tính diện tích, chu vi hình chữ nhật và viết chương trình nhập vào 2 chiều dài và chiều rộng của HCN(hình chữ nhật). Tính và xuất ra diện tích, chu vi của HCN đó.</h4>
+        <div class="form-group">
+          <p>Chiều dài</p>
+          <input id="chieuDai" class="form-control w-25">
+        </div>
+        <br>
+        <div class="form-group">
+          <p>Chiều rộng</p>
+          <input id="chieuRong" class="form-control w-25">
+        </div>
+        <br>
+        <button onclick="Tinh()" id="btnTinh" class="btn btn-success">Tính</button>
+        <div class="mt-2 alert alert-success w-25">
+          Kết quả : <span id="chuVi"></span> - <span id="dienTich"></span>
+        </div>
+      </div>
+      <hr>
+      <div class="form-group">
+        <h4 style="font-size: 20px;">Bài 5: Tính tổng 2 ký số
+          viết chương trình nhập vào 1 số có 2 chữ số (VD: 12, 44, 83). Tính tổng 2 ký số của số vừa nhập.</h4>
+        <div class="form-group">
+          <p></p>
+          <input id="kySo" class="form-control w-25">
+        </div>
+        <br>
+        <button onclick="tinhTongHaiKySo()" id="btntongHaiKySo" class="btn btn-success">Tính tổng</button>
+        <div class="mt-2 alert alert-success w-25">
+          Kết quả : <span id="tongKyso"></span>
+        </div>
+      </div>
+    </div>
+
+
+
     <script src="./js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

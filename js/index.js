@@ -1,16 +1,19 @@
 //Bài 1: Tính tiền lương nhân viên
 //viết chương trình tính tiền lương nhân viên. Lương 1 ngày: 100.000
 
-// input
-let luong1Ngay = 100.000;
-let soNgaylam = 31;
+function tinhTongLuong() {
+   // input
+      let luongNgay = document.getElementById('luong1Ngay').value;
+      let soNgaylam = document.getElementById('soNgaylam').value;
 
-let luong = 0;
+      let tongLuong = 0;
 
-luong = luong1Ngay * soNgaylam;
+      tongLuong = luongNgay * soNgaylam;
 
-console.log("Tổng lương=", luong)
+      document.getElementById('tongLuong').innerHTML = tongLuong;
+      // alert(123);
 
+}
 //Mô hình 3 khối
 /**
  * Đầu vào
@@ -28,23 +31,35 @@ console.log("Tổng lương=", luong)
 //viết chương trình nhập vào 5 số thực. Tính giá trị trung bình của 5 số này và xuất ra màn hình
 
 //input
-let sothuc1 = 2;
-let sothuc2 = 4;
-let sothuc3 = 7;
-let sothuc4 = 9;
-let sothuc5 = 11;
+function giaTriTrungBinh() {
+      // alert(123);
+      let number1 = document.getElementById('soThuc1').value*1;
+      let number2 = document.getElementById('soThuc2').value*1;
+      let number3 = document.getElementById('soThuc3').value*1;
+      let number4 = document.getElementById('soThuc4').value*1;
+      let number5 = document.getElementById('soThuc5').value*1;
 
-let number = 5;
+      // console.log('So thuc 1:', TagsoThuc1);
+      // console.log('So thuc 2:', TagsoThuc2);
+      // console.log('So thuc 3:', TagsoThuc3);
+      // console.log('So thuc 4:', TagsoThuc4);
+      // console.log('So thuc 5:', TagsoThuc5);
 
-let Tong = 0;
+      let number = 5;
 
-Tong = sothuc1 + sothuc2 + sothuc3 + sothuc4 + sothuc5
+      let Tong = 0;
 
-let giatriTB = 0;
+      Tong = number1 + number2 + number3 + number4 + number5;
 
-giatriTB = Tong / number;
 
-console.log("Giá trị trung bình:", giatriTB)
+      let giatriTB = 0;
+
+      giatriTB = Tong / number;
+
+      document.getElementById('giatriTB').innerHTML = giatriTB;
+
+      
+}
 
 //Mô hình 3 khối
 /**
@@ -65,15 +80,17 @@ console.log("Giá trị trung bình:", giatriTB)
 //giá USD hiện nay đang là 23.500 VND. Viết chương trình quy đổi từ USD sang VND. Tính và xuất ra số tiền sau quy đổi VND.
 
 //input
-let GiaUSD = 23.500;
+function quyDoiTien() {
+   let GiaUSD = 23.500;
 
-let soTienUSD = 2;
+   let soTienUSD = document.getElementById('tienUSD').value;
 
-let quyDoiVND = 0;
+   let quyDoiVND = 0;
 
-quyDoiVND = soTienUSD * GiaUSD;
+   quyDoiVND = soTienUSD * GiaUSD;
 
-console.log("Số tiền quy đổi sang VND:",quyDoiVND, "VND");
+   document.getElementById('quyDoiVND').innerHTML = quyDoiVND;
+}
 
 //Mô hình 3 khối
 /**
@@ -93,18 +110,19 @@ console.log("Số tiền quy đổi sang VND:",quyDoiVND, "VND");
 //viết chương trình nhập vào 2 chiều dài và chiều rộng của HCN(hình chữ nhật). Tính và xuất ra diện tích, chu vi của HCN đó.
 
 //input
-let chieuDai = 5;
-let chieuRong = 4;
+function Tinh() {
+   let chieuDai = document.getElementById('chieuDai').value*1;
+   let chieuRong = document.getElementById('chieuRong').value*1;
 
-let dienTich = 0;
-let chuVi = 0;
+   let dienTich = 0;
+   let chuVi = 0;
 
-chuVi = (chieuDai + chieuRong) * 2;
-dienTich = chieuDai * chieuRong;
+   chuVi = (chieuDai + chieuRong) * 2;
+   dienTich = chieuDai * chieuRong;
 
-console.log("Chu vi:", chuVi);
-console.log("Diện tích:", dienTich);
-
+   document.getElementById('chuVi').innerHTML = chuVi;
+   document.getElementById('dienTich').innerHTML = dienTich;
+}
 //Mô hình 3 khối
 /**
  * Đầu vào
@@ -123,17 +141,19 @@ console.log("Diện tích:", dienTich);
 //viết chương trình nhập vào 1 số có 2 chữ số (VD: 12, 44, 83). Tính tổng 2 ký số của số vừa nhập.
 
 //input
-let so = 85;
+function tinhTongHaiKySo() {
+   let so = document.getElementById('kySo').value;
 
-let tongKyso = 0;
+   let tongKyso = 0;
 
-let hangChuc = Math.floor(so / 10);
-let donVi = Math.floor(so % 10);
+   let hangChuc = Math.floor(so / 10);
+   let donVi = Math.floor(so % 10);
 
-tongKyso = hangChuc + donVi;
+   tongKyso = hangChuc + donVi;
 
-console.log("Tổng ký số:", tongKyso);
+   document.getElementById('tongKyso').innerHTML = tongKyso;
 
+}
 //Mô hình 3 khối
 /**
  * Đầu vào
